@@ -111,7 +111,7 @@ class SKSinglePickerView: UIView, UIPickerViewDataSource, UIPickerViewDelegate{
         self.doneButton.setTitleColor(SKSinglePickerView.toolbarTint[theme.rawValue], for: .normal)
     }
     
-    @objc private func backgroundViewPressed(gestureRecognizer: UIFeedbackGenerator) {
+    @objc private func backgroundViewPressed(gestureRecognizer: UITapGestureRecognizer) {
         if SKSinglePickerView.showToolbar {
             self.callback(.cancelPick, self.picker.selectedRow(inComponent: 0))
         } else {

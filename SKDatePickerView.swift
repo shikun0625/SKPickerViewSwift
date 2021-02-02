@@ -129,7 +129,7 @@ class SKDatePickerView: UIView {
         self.doneButton.setTitleColor(SKDatePickerView.toolbarTint[theme.rawValue], for: .normal)
     }
     
-    @objc private func backgroundViewPressed(gestureRecognizer: UIFeedbackGenerator) {
+    @objc private func backgroundViewPressed(gestureRecognizer: UITapGestureRecognizer) {
         if SKDatePickerView.showToolbar {
             self.callback(.cancelPick, self.picker.date)
         } else {

@@ -108,7 +108,7 @@ class SKMutilePickerView: UIView {
         self.doneButton.setTitleColor(SKMutilePickerView.toolbarTint[theme.rawValue], for: .normal)
     }
     
-    @objc private func backgroundViewPressed(gestureRecognizer: UIFeedbackGenerator) {
+    @objc private func backgroundViewPressed(gestureRecognizer: UITapGestureRecognizer) {
         if SKMutilePickerView.showToolbar {
             self.callback(.cancelPick, self.picker.selectedRow(inComponent: 0))
         } else {
