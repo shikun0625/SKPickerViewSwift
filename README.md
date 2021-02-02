@@ -16,6 +16,8 @@ Podfile
 		SKDatePickerView.theme 		= .Dark
 		SKDatePickerView.sytel 		= .inline		// available by iOS 13.4
 		SKDatePickerView.maxDate 	= Date.init()
+		SKDatePickerView.showToolbar	= YES			// false, when pickerView disappeared that will auto send confirmPick event,
+									// true, only press Done button that will send confirmPick event
 		...
 		// Optional Over
 		SKDatePickerView.ShowPicker(nil, .date) { (SKPickerEvent, Date) in
