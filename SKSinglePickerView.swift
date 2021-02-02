@@ -72,10 +72,10 @@ class SKSinglePickerView: UIView, UIPickerViewDataSource, UIPickerViewDelegate{
         self.picker.selectRow(initIndex, inComponent: 0, animated: true)
         self.addSubview(self.picker)
         
-        let window = UIApplication.shared.windows.filter({ $0.isKeyWindow }).last
+        let window = UIApplication.shared.windows.last
         window?.rootViewController?.view.addSubview(self)
         
-        if #available(iOS 12.0, *) {
+        if #available(iOS 13.0, *) {
             let currentMode = UITraitCollection.current.userInterfaceStyle
             if SKSinglePickerView.theme == .defalut {
                 if currentMode == .dark {
