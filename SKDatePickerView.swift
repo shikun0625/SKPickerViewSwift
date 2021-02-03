@@ -15,16 +15,16 @@ public class SKDatePickerView: UIView {
     
     
     @available(iOS 13.4, *)
-    static var style: UIDatePickerStyle                                 = .automatic
-    static var maxDate: Date?
-    static var minDate: Date?
-    static var minuteInterval: SKDatePickerMinuteInterval               = .fiveMinutes
-    static var theme:SKPickerViewTheme                                  = .defalut
-    static var backgroundColor: [UIColor]                               = [UIColor.white, UIColor.black]
-    static var pickerColor: [UIColor]                                   = [UIColor.init(red: 0.996, green: 0.957, blue: 0.906, alpha: 1), UIColor.init(red: 0.251, green: 0.251, blue: 0.251, alpha: 1)]
-    static var toolbarColor: [UIColor]                                  = [UIColor.init(red: 0.918, green: 0.918, blue: 0.886, alpha: 1), UIColor.init(red: 0.173, green: 0.173, blue: 0.173, alpha: 1)]
-    static var toolbarTint: [UIColor]                                   = [UIColor.init(red: 0.0, green: 0.627, blue: 0.776, alpha: 1), UIColor.white]
-    static var showToolbar: Bool                                        = false         // false, when pickerView disappeared that will auto send confirmPick event,
+    public static var style: UIDatePickerStyle                                 = .automatic
+    public static var maxDate: Date?
+    public static var minDate: Date?
+    public static var minuteInterval: SKDatePickerMinuteInterval               = .fiveMinutes
+    public static var theme:SKPickerViewTheme                                  = .defalut
+    public static var backgroundColor: [UIColor]                               = [UIColor.white, UIColor.black]
+    public static var pickerColor: [UIColor]                                   = [UIColor.init(red: 0.996, green: 0.957, blue: 0.906, alpha: 1), UIColor.init(red: 0.251, green: 0.251, blue: 0.251, alpha: 1)]
+    public static var toolbarColor: [UIColor]                                  = [UIColor.init(red: 0.918, green: 0.918, blue: 0.886, alpha: 1), UIColor.init(red: 0.173, green: 0.173, blue: 0.173, alpha: 1)]
+    public static var toolbarTint: [UIColor]                                   = [UIColor.init(red: 0.0, green: 0.627, blue: 0.776, alpha: 1), UIColor.white]
+    public static var showToolbar: Bool                                        = false         // false, when pickerView disappeared that will auto send confirmPick event,
                                                                                         // true, only press Done button that will send confirmPick event
     
     private var callback:(_ event: SKPickerEvent, _ date: Date) -> Void = {_,_ in }
@@ -36,7 +36,7 @@ public class SKDatePickerView: UIView {
     /*
      data only support Array<String>, Dictionary<String, Array<String>>, Dictionary<String, Array<Dictionary<String, Array<String>>>>...
      */
-    static func ShowPicker(_ date:Date?, _ pickType:UIDatePicker.Mode, _ callback:@escaping (_ event: SKPickerEvent, _ date: Date) -> Void) {
+    public static func ShowPicker(_ date:Date?, _ pickType:UIDatePicker.Mode, _ callback:@escaping (_ event: SKPickerEvent, _ date: Date) -> Void) {
         let pickView =  SKDatePickerView(date, pickType, callback);
         if pickView != nil {
             pickView!.show()

@@ -13,12 +13,12 @@ private let SCREEN_HEIGHT                   = UIScreen.main.bounds.height
 public class SKMutilePickerView: UIView {
 
     
-    static var theme: SKPickerViewTheme                             = .defalut
-    static var backgroundColor: [UIColor]                           = [UIColor.white, UIColor.black]
-    static var pickerColor: [UIColor]                               = [UIColor.init(red: 0.996, green: 0.957, blue: 0.906, alpha: 1), UIColor.init(red: 0.251, green: 0.251, blue: 0.251, alpha: 1)]
-    static var toolbarColor: [UIColor]                              = [UIColor.init(red: 0.918, green: 0.918, blue: 0.886, alpha: 1), UIColor.init(red: 0.173, green: 0.173, blue: 0.173, alpha: 1)]
-    static var toolbarTint: [UIColor]                               = [UIColor.init(red: 0.0, green: 0.627, blue: 0.776, alpha: 1), UIColor.white]
-    static var showToolbar: Bool                                    = false         // false, when pickerView disappeared that will auto send confirmPick event,
+    public static var theme: SKPickerViewTheme                             = .defalut
+    public static var backgroundColor: [UIColor]                           = [UIColor.white, UIColor.black]
+    public static var pickerColor: [UIColor]                               = [UIColor.init(red: 0.996, green: 0.957, blue: 0.906, alpha: 1), UIColor.init(red: 0.251, green: 0.251, blue: 0.251, alpha: 1)]
+    public static var toolbarColor: [UIColor]                              = [UIColor.init(red: 0.918, green: 0.918, blue: 0.886, alpha: 1), UIColor.init(red: 0.173, green: 0.173, blue: 0.173, alpha: 1)]
+    public static var toolbarTint: [UIColor]                               = [UIColor.init(red: 0.0, green: 0.627, blue: 0.776, alpha: 1), UIColor.white]
+    public static var showToolbar: Bool                                    = false         // false, when pickerView disappeared that will auto send confirmPick event,
                                                                                     // true, only press Done button that will send confirmPick event
     
     private var callback:(_ event: SKPickerEvent, _ indexPath: Int) -> Void = {_,_ in }
@@ -28,7 +28,7 @@ public class SKMutilePickerView: UIView {
     private let doneButton: UIButton = UIButton.init(type: .system)
 
     
-    static func ShowPicker(_ pickerViewDelegate:UIPickerViewDelegate?, _ pickerDataSource:UIPickerViewDataSource?, _ callback:@escaping (_ event: SKPickerEvent, _ selectedIndex: Int) -> Void) {
+    public static func ShowPicker(_ pickerViewDelegate:UIPickerViewDelegate?, _ pickerDataSource:UIPickerViewDataSource?, _ callback:@escaping (_ event: SKPickerEvent, _ selectedIndex: Int) -> Void) {
         let pickView =  SKMutilePickerView(pickerViewDelegate, pickerDataSource, callback);
         if pickView != nil {
             pickView!.show()
