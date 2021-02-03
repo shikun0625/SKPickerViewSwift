@@ -11,7 +11,7 @@ private let SCREEN_WIDTH                    = UIScreen.main.bounds.width
 private let SCREEN_HEIGHT                   = UIScreen.main.bounds.height
 
 
-class SKDatePickerView: UIView {
+public class SKDatePickerView: UIView {
     
     
     @available(iOS 13.4, *)

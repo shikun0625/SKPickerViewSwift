@@ -7,13 +7,13 @@
 
 import Foundation
 
-enum SKPickerViewTheme: Int {
+public enum SKPickerViewTheme: Int {
     case Light  = 0
     case Dark   = 1
     case defalut   // the theme with system, light theme always ues before iOS 12.0
 }
 
-enum SKPickerEvent {
+public enum SKPickerEvent {
     case valueChanged
     case confirmPick
     case cancelPick
@@ -24,7 +24,7 @@ enum SKPickerEvent {
     case dataParsingError
 }
 
-enum SKDatePickerMinuteInterval: Int {
+public enum SKDatePickerMinuteInterval: Int {
     case oneMinutes     = 1
     case towMinutes     = 2
     case threeMinutes   = 3

@@ -1,6 +1,6 @@
 # Version
 
-0.1.0
+0.1.2
 
 # SKPickerViewSwift
 This library provides a picker view that fast to create

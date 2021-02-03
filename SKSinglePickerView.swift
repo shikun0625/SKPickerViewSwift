@@ -10,7 +10,7 @@ private let SCREEN_WIDTH                    = UIScreen.main.bounds.width
 private let SCREEN_HEIGHT                   = UIScreen.main.bounds.height
 
 
-class SKSinglePickerView: UIView, UIPickerViewDataSource, UIPickerViewDelegate{
+public class SKSinglePickerView: UIView, UIPickerViewDataSource, UIPickerViewDelegate{
     
     
     
@@ -138,19 +138,19 @@ class SKSinglePickerView: UIView, UIPickerViewDataSource, UIPickerViewDelegate{
         self.hide()
     }
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return self.data.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return self.data[row]
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.callback(.valueChanged, row)
     }
 }

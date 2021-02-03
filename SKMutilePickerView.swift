@@ -10,7 +10,7 @@ import UIKit
 private let SCREEN_WIDTH                    = UIScreen.main.bounds.width
 private let SCREEN_HEIGHT                   = UIScreen.main.bounds.height
 
-class SKMutilePickerView: UIView {
+public class SKMutilePickerView: UIView {
 
     
     static var theme: SKPickerViewTheme                             = .defalut
