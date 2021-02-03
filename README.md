@@ -1,6 +1,6 @@
 # Version
 
-0.0.2
+0.1.0
 
 # SKPickerViewSwift
 This library provides a picker view that fast to create
@@ -11,7 +11,7 @@ This library provides a picker view that fast to create
 # Installation with CocoaPods
 Podfile
 
-    pod 'SKPickerViewSwift', '~> 0.0.2'
+    pod 'SKPickerViewSwift'
     
 # How To Use
 
